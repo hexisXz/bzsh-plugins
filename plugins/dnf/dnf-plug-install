@@ -1,0 +1,27 @@
+#!/bin/sh
+
+function pluginstall () {
+	mv dnf.plug ~/.config/bzsh/plugins
+
+	echo "source ~/.config/bzsh/plugins/dnf.plug" >> ~/.config/bzsh/bzsh-plug
+
+	echo "how to use the dnf plugin:\n
+	      dna: autoremove
+
+	      dnc: clean
+
+	      dnd: downgrade
+
+	      dnh: dnf history
+
+	      dni: dnf install
+
+	      dns: dnf search
+
+	      dnu: dnf upgrade"
+}
+
+
+[[ "command -v dnf 2>/dev/null" ]] && installplug || echo "ERROR: this plugin will not work on your system!"
+
+ 

@@ -1,0 +1,28 @@
+#!/bin/sh 
+
+
+function installplug () {
+	mv nix.plug ~/.config/bzsh/plugins
+
+	echo "source ~/.config/bzsh/plugins/nix.plug" >> ~/.config/bzsh/bzsh-plug
+
+	echo "to use the nix plugin:\n
+              nix -i to install a program
+
+	      nix -R to remove a program
+
+	      nix -l list installed packages
+
+	      nix -u to update all nix packages
+
+	      nix -up to update a single program"
+}
+
+
+#install nix if its not installed & install the plugin
+[[ "command -v nix-env 2>/dev/null" ]] && installplug || curl -L https://nixos.org/nix/install | sh
+
+
+
+
+
