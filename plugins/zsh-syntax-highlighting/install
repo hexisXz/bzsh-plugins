@@ -7,3 +7,5 @@ function installplug () {
 	echo "source ~/.config/bzsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.config/bzsh/bzsh-plug
 }
 
+
+installplug
