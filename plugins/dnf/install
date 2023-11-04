@@ -1,6 +1,10 @@
 #!/bin/sh
 
 function pluginstall () {
+	git clone https://github.com/hexisXz/bzsh-plugins-source/tree/main/plugins-src/dnf
+
+	cd dnf
+
 	mv dnf.plug ~/.config/bzsh/plugins
 
 	echo "source ~/.config/bzsh/plugins/dnf.plug" >> ~/.config/bzsh/bzsh-plug

@@ -2,7 +2,11 @@
 
 
 function installplug () {
-	mv nix.plug ~/.config/bzsh/plugins
+	git clone https://github.com/hexisXz/bzsh-plugins-source/tree/main/plugins-src/nix
+
+	cd nix
+
+	mv nix.plug ~/.config/bzsh/plugins 
 
 	echo "source ~/.config/bzsh/plugins/nix.plug" >> ~/.config/bzsh/bzsh-plug
 

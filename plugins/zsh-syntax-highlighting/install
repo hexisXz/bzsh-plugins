@@ -2,7 +2,7 @@
 
 
 function installplug () {
-	mkdir -p ~/.config/bzsh/plugins/zsh-syntax-highlighting && mv zsh-syntax-highlighting.zsh ~/.config/bzsh/plugins/zsh-syntax-highlighting && mv highlighters ~/.config/bzsh/plugins/zsh-syntax-highlighting && mv .version ~/.config/bzsh/plugins/zsh-syntax-highlighting && mv .revision-hash ~/.config/bzsh/plugins/zsh-syntax-highlighting  
+	mkdir -p ~/.config/bzsh/plugins/zsh-syntax-highlighting && git clone https://github.com/hexisXz/bzsh-plugins-source/tree/main/plugins-src/zsh-syntax-highlighting && cd zsh-syntax-highlighting && mv zsh-syntax-highlighting.zsh ~/.config/bzsh/plugins/zsh-syntax-highlighting && mv highlighters ~/.config/bzsh/plugins/zsh-syntax-highlighting && mv .version ~/.config/bzsh/plugins/zsh-syntax-highlighting && mv .revision-hash ~/.config/bzsh/plugins/zsh-syntax-highlighting  
 
 	echo "source ~/.config/bzsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.config/bzsh/bzsh-plug
 }
